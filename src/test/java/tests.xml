@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test" parallel="tests" thread-count="2">
+    <test name="test 1">
+        <groups>
+            <run>
+                <include name="деление"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="test.CalculatorTests"/>
+            <parameter name="firstValue" value="1"/>
+            <parameter name="secondValue" value="2"/>
+        </classes>
+    </test>
+
+    <test name="test2">
+        <classes>
+            <class name="test.CalculatorTests"></class>
+        </classes>
+    </test>
+
+</suite>
